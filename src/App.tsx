@@ -1,9 +1,14 @@
+import React from 'react';
+import Nav from './Nav';
+import Main from './Main';
+
 function App() {
-  return (
-    <div>
-      Hello world!
-    </div>
-  );
+    return (
+        <>
+            <Nav/>
+            <Main/>
+        </>
+    );
 }
 
 export default App;
