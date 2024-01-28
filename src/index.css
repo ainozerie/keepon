@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root {
   --black: #222831;
   --gray: #393E46;
   --teal: #00ADB5;
   --lightgray: #EEEEEE;
-  --read: #FF2E63;
+  --red: #FF2E63;
   --green: #1FAB89;
   --white: #FFFFFF;
 }
@@ -13,7 +13,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: monospace;
+  font-family: Roboto;
   transition: ease-in-out;
   transition-duration: 0.2s;
   user-select: none;
@@ -23,14 +23,14 @@ input {
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   background-color: var(--white);
 }
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100vw;
   height: 92vh;
 }
@@ -38,7 +38,7 @@ main {
 /* Navigation */
 nav {
   width: 100vw;
-  height: 8vh;
+  height: calc(8vh - 1px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,7 +51,20 @@ nav {
 
 .logo {
   margin-left: 4vw;
+  color: var(--green);
+
 }
 .menu {
   margin-right: 4vw;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  color: var(--gray);
+}
+h2 {
+  font-size: 16px;
 }

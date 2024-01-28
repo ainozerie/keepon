@@ -1,9 +1,10 @@
 import React from 'react';
+import Tasks from './Tasks/Tasks';
 
 function Main() {
     return (
         <main>
-            No tasks yet...
+            <Tasks />
         </main>
     );
 }

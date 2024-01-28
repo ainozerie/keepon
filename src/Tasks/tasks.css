@@ -1,0 +1,28 @@
+/* Style for tasks */
+
+.tasks {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 24px);
+    gap: 12px;
+}
+
+.task {
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 var(--lightgray);
+}
+.task.active {
+    box-shadow: 0 8px 16px 0 var(--lightgray);
+}
+
+.title, .description, .timeout {
+    margin: 8px 8px;
+}
+.title {
+    font-weight: bold;
+    color: var(--gray);
+}
+.description {
+    color: var(--gray);
+}
