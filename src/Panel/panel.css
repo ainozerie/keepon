@@ -1,0 +1,10 @@
+/* Panel styling */
+
+.panel {
+    background-color: var(--white);
+    height: 8vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+    border-top: 1px solid var(--lightgray);
+}

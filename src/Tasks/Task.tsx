@@ -1,21 +1,34 @@
 import React, { useState } from 'react';
 
-function Task() {
-    const [isActive, setIsActive] = useState<Boolean>(false);
+interface TaskProps {
+    onClickTask: (taskId: string) => void,
+    active: boolean,
+    id: string
+}
 
-    const toggleActivity = ():void => {
-        
-        setIsActive(!isActive);
+function Task(props: TaskProps) {
+
+    const toggleActivity = (): void => {
+        if (props.active) {
+            props.onClickTask('');
+        } else {
+            props.onClickTask(props.id);
+        }
     }
     return (
-        <div className={isActive ? 'task active' : 'task'} onClick={toggleActivity}>
-            <p className="title">
-                Finish backend part
-            </p>
-            {isActive && <p className="description">Some specific information that could be useful to describe the task more precise with all details</p>}
-            <p className="timeout">
-                6 days left
-            </p>
+        <div className={props.active ? 'task active' : 'task'} onClick={toggleActivity}>
+            <div className="info">
+                <p className="title">
+                    Finish backend part
+                </p>
+                <p className={props.active ? 'description' : 'description hidden'}>
+                    Some specific information that could be useful to describe the task more precise with all details
+                </p>
+                <p className="timeout">
+                    6 days left
+                </p>
+
+            </div>
         </div>
     );
 }
