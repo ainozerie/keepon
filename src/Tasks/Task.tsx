@@ -1,27 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../redux";
+import { setActiveTaskId } from '../redux/TaskReducer';
 
 interface TaskProps {
-    onClickTask: (taskId: string) => void,
-    active: boolean,
     id: string
 }
 
 function Task(props: TaskProps) {
+    const dispatch = useDispatch();
+    const isActive = useSelector((state: RootState) => state.task.activeTaskId === props.id);
 
     const toggleActivity = (): void => {
-        if (props.active) {
-            props.onClickTask('');
+        if (isActive) {
+            dispatch(setActiveTaskId(''));
         } else {
-            props.onClickTask(props.id);
+            dispatch(setActiveTaskId(props.id));
         }
     }
     return (
-        <div className={props.active ? 'task active' : 'task'} onClick={toggleActivity}>
+        <div className={isActive ? 'task active' : 'task'} onClick={toggleActivity}>
             <div className="info">
                 <p className="title">
                     Finish backend part
                 </p>
-                <p className={props.active ? 'description' : 'description hidden'}>
+                <p className={isActive ? 'description' : 'description hidden'}>
                     Some specific information that could be useful to describe the task more precise with all details
                 </p>
                 <p className="timeout">
