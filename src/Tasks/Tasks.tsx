@@ -12,7 +12,6 @@ function Tasks() {
 
     return (
         <div className='tasks'>
-            <h1>Current tasks:</h1>
             {tasks.map((task: string) => {
                 return <Task id={task} key={task}/>
             })}

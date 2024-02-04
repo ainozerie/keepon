@@ -1,40 +1,31 @@
 /* Style for tasks */
 
 .tasks {
-    margin-top: calc(24px + 8vh);
+    margin-top: calc(24px + 8vh + 24px);
     padding-bottom: calc(24px + 8vh);
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 12px;
 }
 
 .task {
-    border-radius: 0 4px 4px 0;
+    border-radius: 2px 2px 2px 2px;
     display: flex;
     justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--lightgray);
 }
-
-.task.active {
-    border-left: 5px solid var(--green);
-    box-shadow:  0 2px 6px 0 rgba(0,0,0,0.1);
+.task:last-child {
+    border-bottom: none;
 }
 
 .title,
-.description,
 .timeout {
     margin: 8px 8px;
+    color: var(--gray);
 }
 
 .title {
     font-weight: bold;
-    color: var(--gray);
-}
-
-.description {
-    color: var(--gray);
-}
-
-.hidden {
-    display: none;
+    color: var(--black);
 }

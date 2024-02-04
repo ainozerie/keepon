@@ -1,7 +1,8 @@
 import React from 'react';
 
 interface ButtonProps {
-    title: string
+    title: string,
+    class: string
 }
 
 function Button(props: ButtonProps) {

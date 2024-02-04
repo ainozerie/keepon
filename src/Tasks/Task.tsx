@@ -19,13 +19,10 @@ function Task(props: TaskProps) {
         }
     }
     return (
-        <div className={isActive ? 'task active' : 'task'} onClick={toggleActivity}>
+        <div className='task' onClick={toggleActivity}>
             <div className="info">
                 <p className="title">
-                    Finish backend part
-                </p>
-                <p className={isActive ? 'description' : 'description hidden'}>
-                    Some specific information that could be useful to describe the task more precise with all details
+                    Finish backend part within two days...
                 </p>
                 <p className="timeout">
                     6 days left

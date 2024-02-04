@@ -7,4 +7,22 @@
     position: fixed;
     bottom: 0px;
     border-top: 1px solid var(--lightgray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    background-color: rgb(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
 }
+
+.panel span {
+    font-size: 32px;
+    color: var(--green);
+    cursor: pointer;
+}
+.panel span.disabled {
+    color: var(--lightgray);
+    cursor: unset;
+}
+
+

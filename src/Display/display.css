@@ -1,0 +1,16 @@
+.display {
+    position: fixed;
+    top: 8vh;
+    width: 100vw;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green-transparent);
+    backdrop-filter: blur(2px);
+}
+
+.display p {
+    color: var(--white);
+    font-weight: bold;
+}
