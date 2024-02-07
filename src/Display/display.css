@@ -6,8 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--green-transparent);
+    background-color: var(--gray-transparent);
     backdrop-filter: blur(2px);
+    z-index: 101;
 }
 
 .display p {

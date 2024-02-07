@@ -2,9 +2,13 @@ import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux";
 import { setActiveTaskId } from '../redux/TaskReducer';
+import TaskView from './TaskView';
 
 interface TaskProps {
-    id: string
+    id: string,
+    title: string,
+    description: string | undefined,
+    category: string | undefined
 }
 
 function Task(props: TaskProps) {
@@ -19,15 +23,14 @@ function Task(props: TaskProps) {
         }
     }
     return (
-        <div className='task' onClick={toggleActivity}>
+        <div className={isActive ? 'task active' : 'task'} onClick={toggleActivity}>
             <div className="info">
                 <p className="title">
-                    Finish backend part within two days...
+                    {props.title}
                 </p>
                 <p className="timeout">
-                    6 days left
+                    22/10
                 </p>
-
             </div>
         </div>
     );

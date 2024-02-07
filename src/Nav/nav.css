@@ -9,6 +9,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   background-color: var(--white);
+  z-index: 101;
 }
 .logo, nav .material-symbols-outlined {
   color: var(--green);

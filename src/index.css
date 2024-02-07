@@ -2,12 +2,12 @@
 
 :root {
   --black: #222831;
-  --gray: #393E46;
+  --gray: #adb5bd;;
   --teal: #00ADB5;
   --lightgray: #EEEEEE;
   --red: #FF2E63;
   --green: #1FAB89;
-  --green-transparent: #1fab88cf;
+  --gray-transparent: #333333e0;
   --white: #FFFFFF;
   --orange: #ffb703;
 }
@@ -22,9 +22,13 @@
   margin: 0;
   padding: 0;
   font-family: Roboto;
-  transition: ease-in-out;
+  transition: ease-out;
   transition-duration: 0.2s;
   user-select: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 input {
@@ -32,7 +36,7 @@ input {
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   background-color: var(--white);
 }
 
@@ -42,7 +46,7 @@ main {
   align-items: center;
   justify-content: flex-start;
   width: 92vw;
-  height: 84vh;
+  margin-top: calc(8vh + 30px + 12px);
 }
 
 /* Headings */

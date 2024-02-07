@@ -18,7 +18,10 @@ function Panel() {
         console.log('delete task');
     }
     const createTask = (event: any) => {
-        console.log('create task')
+        console.log('create task');
+    }
+    const selectTasks = (event: any) => {
+        console.log('task selection');
     }
 
     return (
