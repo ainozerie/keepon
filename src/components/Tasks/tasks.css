@@ -1,0 +1,65 @@
+/* Style for tasks */
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.task {
+    border-radius: 2px 2px 2px 2px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--lightgray);
+    cursor: pointer;
+}
+.task.active .info {
+    background-color: var(--green);
+}
+.task.active .title, .task.active .timeout {
+    color: var(--white);
+}
+.task:last-child {
+    border-bottom: none;
+}
+
+.task .title {
+    font-weight: bold;
+    color: var(--black);
+    margin: 8px 8px;
+}
+
+.task .timeout {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--gray);
+    margin: 8px 8px;
+}
+
+.task .info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2px;
+}
+
+.task .description {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0px 8px 0px 8px;
+    font-size: 14px;
+}
+.task .description.active {
+    max-height: fit-content;
+    margin: 8px 8px 8px 8px;
+}
+
+.no-data {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    color: var(--gray);
+    margin: auto;
+}

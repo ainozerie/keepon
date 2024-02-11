@@ -1,0 +1,115 @@
+/* TaskView */
+.task-view-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    opacity: 1;
+    transition: ease-out;
+    transition-duration: 0s;
+}
+
+.task-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90%;
+    max-width: 800px;
+    min-width: 350px;
+    height: fit-content;
+    border-radius: 12px;
+    z-index: 101;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: var(--white);
+    padding-bottom: 4px;
+}
+
+.task-view .header {
+    font-size: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 12px 12px 0px 0px;
+}
+
+.task-view .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(77, 77, 77);
+    padding: 12px 16px 8px 16px;
+}
+
+.task-view .description {
+    font-size: 16px;
+    padding: 0px 16px 8px 16px;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -1;
+}
+.title input {
+    width: calc(100% - 8px);
+    border: none;
+    background-color: var(--lightgray);
+    padding: 10px 4px;
+    color: var(--black);
+    font-size: 16px;
+    height: 20px;
+    margin-top: 4px;
+}
+
+.title input::placeholder {
+    color: var(--gray);
+    
+}
+.description textarea {
+    width: calc(100% - 8px);
+    border: none;
+    background-color: var(--lightgray);
+    padding: 4px 4px;
+    color: var(--black);
+    font-size: 16px;
+    resize: none;
+    margin-top: 4px;
+}
+
+.description textarea::placeholder {
+    color: var(--gray);
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.task-view .deadline {
+    width: calc(100% - 8px);
+    font-size: 16px;
+    padding: 0px 16px 12px 16px;
+}
+
+.deadline input[type="date"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--lightgray);
+    color: var(--black);
+    font-size: 16px;
+    padding: 4px;
+    margin-top: 4px;
+    width: fit-content;
+}
+
+.deadline label {
+    color: var(--black);
+}

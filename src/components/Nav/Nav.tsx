@@ -12,7 +12,7 @@ function Nav() {
             <div className="logo">
                 keepon
             </div>
-            <Icon disabled={false} name='menu' onClick={openMenu}/>
+            <Icon active={true} name='menu' onClick={openMenu}/>
         </nav>
     );
 }

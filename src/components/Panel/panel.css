@@ -1,0 +1,38 @@
+/* Panel styling */
+
+.panel {
+    height: 7vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+    border-top: 1px solid var(--lightgray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    background-color: var(--white);
+    z-index: 101;
+}
+
+.panel span.active {
+    color: var(--green);
+    cursor: pointer;
+    display: block;
+}
+.panel span {
+    color: var(--gray);
+    font-size: 32px;
+}
+
+.confirmation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+.confirmation .cancel {
+    color: var(--red) !important;
+}
+.confirmation .check_circle.active {
+    color: var(--green) !important;
+}

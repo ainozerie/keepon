@@ -5,7 +5,7 @@
   --gray: #adb5bd;;
   --teal: #00ADB5;
   --lightgray: #EEEEEE;
-  --red: #FF2E63;
+  --red: #F93943;
   --green: #1FAB89;
   --gray-transparent: #333333e0;
   --white: #FFFFFF;
@@ -22,7 +22,7 @@
   margin: 0;
   padding: 0;
   font-family: Roboto;
-  transition: ease-out;
+  transition: ease-in-out;
   transition-duration: 0.2s;
   user-select: none;
 }
@@ -31,8 +31,9 @@ a {
   text-decoration: none;
 }
 
-input {
+input, textarea {
   outline: none;
+  border-radius: 4px;
 }
 
 body {
@@ -47,6 +48,10 @@ main {
   justify-content: flex-start;
   width: 92vw;
   margin-top: calc(8vh + 30px + 12px);
+}
+
+.other {
+  color: var(--gray);
 }
 
 /* Headings */
