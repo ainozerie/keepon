@@ -1,8 +1,9 @@
 export interface TaskInterface {
-    _id: string,
+    id: string,
     title: string,
-    description: string | null | undefined,
-    deadline: string | null | undefined
+    description: string,
+    deadline: string,
+    completed: boolean
 } 
 
 export interface NewTaskInterface {

@@ -1,10 +1,14 @@
 import React from 'react';
 import './nav.css';
-import Icon from '../Common/Icon';
+import Icon from '../lib/Icon';
+import { useDispatch } from 'react-redux';
+import { setActiveTaskId } from '../../redux/TaskReducer';
 
 function Nav() {
-    const openMenu = () => {
-        console.log('opens menu')
+    const dispatch = useDispatch();
+
+    const createNewTask = () => {
+        dispatch(setActiveTaskId('new'));
     }
 
     return (
@@ -12,7 +16,7 @@ function Nav() {
             <div className="logo">
                 keepon
             </div>
-            <Icon active={true} name='menu' onClick={openMenu}/>
+            <Icon active={true} name='add_circle' onClick={createNewTask}/>
         </nav>
     );
 }

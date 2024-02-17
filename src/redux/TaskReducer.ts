@@ -4,7 +4,10 @@ import { NewTaskInterface, TaskInterface } from "../components/interfaces/Task";
 export interface TaskInitialState {
     activeTaskId: string,
     tasks: TaskInterface[],
-    newTask: NewTaskInterface
+    newTask: NewTaskInterface,
+    edit: boolean,
+    toBeDeleted: string,
+    toBeAdded: string
 }
 const initialState: TaskInitialState = {
     activeTaskId: '',
@@ -13,7 +16,10 @@ const initialState: TaskInitialState = {
         title: '',
         description: '',
         deadline: ''
-    }
+    },
+    edit: false,
+    toBeDeleted: '',
+    toBeAdded: ''
 }
 
 export const taskSlice = createSlice({
@@ -23,15 +29,25 @@ export const taskSlice = createSlice({
         setActiveTaskId: (state, action: PayloadAction<string>) => {
             return state = {...state, activeTaskId: action.payload}
         },
+        setToBeDeleted: (state, action: PayloadAction<string>) => {
+            return state = {...state, toBeDeleted: action.payload}
+        },
+        setToBeAdded: (state, action: PayloadAction<string>) => {
+            return state = {...state, toBeAdded: action.payload}
+        },
         setTasks: (state, action: PayloadAction<TaskInterface[]>) => {
-            return state = {...state, tasks: action.payload}
+            let sortedTasks:TaskInterface[] = [...action.payload.filter(t => !t.completed), ...action.payload.filter(t => t.completed)]
+            return state = {...state, tasks: sortedTasks}
         },
         setNewTask: (state, action: PayloadAction<NewTaskInterface>) => {
             return state = {...state, newTask: action.payload}
+        },
+        setEdit: (state, action: PayloadAction<boolean>) => {
+            return state = {...state, edit: action.payload}
         }
     }
 });
 
 // Part 4
-export const { setActiveTaskId, setTasks, setNewTask } = taskSlice.actions;
+export const { setActiveTaskId, setTasks, setNewTask, setEdit, setToBeDeleted, setToBeAdded } = taskSlice.actions;
 export default taskSlice.reducer;

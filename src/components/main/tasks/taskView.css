@@ -6,10 +6,11 @@
     left: 0;
     z-index: 100;
     width: 100%;
-    backdrop-filter: blur(1px);
+    height: 100%;
+    backdrop-filter: blur(2px);
     opacity: 1;
     transition: ease-out;
-    transition-duration: 0s;
+    transition-duration: 0.25s;
 }
 
 .task-view {
@@ -112,4 +113,23 @@ label {
 
 .deadline label {
     color: var(--black);
+}
+
+.task-view .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+    height: 48px;
+    border-top: 1px solid var(--lightgray);
+    margin-top: 8px;
+}
+
+.task-view .buttons .material-symbols-outlined {
+    color: var(--green);
+    font-size: 28px;
+    margin-top: 4px;
+}
+.task-view .buttons .close {
+    color: var(--red);
 }

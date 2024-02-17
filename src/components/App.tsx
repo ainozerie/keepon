@@ -1,10 +1,10 @@
 import React from 'react';
 import { Provider } from "react-redux";
 import { store } from '../redux';
-import Nav from './Nav/Nav';
-import Main from './Main';
-import Panel from './Panel/Panel';
-import Display from './Display/Display';
+import Nav from './nav/Nav';
+import Main from './main/Main';
+import Display from './display/Display';
+import Panel from './panel/Panel';
 
 function App() {
     // fix for safari on Iphone moving fields
@@ -14,7 +14,7 @@ function App() {
             <Nav/>
             <Display/>
             <Main/>
-            <Panel/>
+            <Panel />
         </Provider>
     );
 }

@@ -1,22 +1,17 @@
 import React, { useEffect } from 'react';
-import Tasks from './Tasks/Tasks';
+import Tasks from './tasks/Tasks';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import TaskView from './Tasks/TaskView';
-import { getTasks } from '../services/taskService';
+import { getTasks } from '../../services/taskService';
 import { useDispatch } from 'react-redux';
-import { setTasks } from '../redux/TaskReducer';
-import { TaskInterface } from './interfaces/Task';
+import { setTasks } from '../../redux/TaskReducer';
+import { TaskInterface } from '../interfaces/Task';
+import Icon from '../lib/Icon';
 
 function Main() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        getTasks().then(res => {
-            if (res.status === 200) {
-                const tasks: TaskInterface[] = res.data.data
-                dispatch(setTasks(tasks));
-            }
-        });
+        dispatch(setTasks(getTasks()));
     }, []);
 
     return (
@@ -26,6 +21,7 @@ function Main() {
                     <Route path="/" element={<Tasks />} />
                 </Routes>
             </BrowserRouter>
+            {/* <Icon name='edit_square' onClick={() => {}} active={true}/> */}
         </main>
     );
 }

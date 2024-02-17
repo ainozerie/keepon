@@ -5,11 +5,11 @@
   --gray: #adb5bd;;
   --teal: #00ADB5;
   --lightgray: #EEEEEE;
-  --red: #F93943;
+  --red: #DB324D;
   --green: #1FAB89;
   --gray-transparent: #333333e0;
   --white: #FFFFFF;
-  --orange: #ffb703;
+  --orange: #4FB0C6;
 }
 
 #root {
@@ -23,7 +23,7 @@
   padding: 0;
   font-family: Roboto;
   transition: ease-in-out;
-  transition-duration: 0.2s;
+  transition-duration: 0.25s;
   user-select: none;
 }
 
@@ -64,4 +64,8 @@ h1 {
 
 h2 {
   font-size: 16px;
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
 }

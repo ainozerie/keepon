@@ -13,6 +13,8 @@
     padding: 8px 0;
     border-bottom: 1px solid var(--lightgray);
     cursor: pointer;
+    overflow: hidden;
+    max-height: fit-content;
 }
 .task.active .info {
     background-color: var(--green);
@@ -53,7 +55,7 @@
 }
 .task .description.active {
     max-height: fit-content;
-    margin: 8px 8px 8px 8px;
+    margin: 12px 8px 8px 8px;
 }
 
 .no-data {
@@ -62,4 +64,46 @@
     padding: 16px;
     color: var(--gray);
     margin: auto;
+    animation: appearance;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+}
+
+.task .buttons .material-symbols-outlined {
+    color: white;
+}
+
+.task.completed .title{
+    color: var(--lightgray);
+    text-decoration: line-through;
+    animation: appearance;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+}
+
+.task .block {
+    color: var(--gray);
+    font-size: 20px;
+}
+.task.to-be-deleted {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border-bottom: 0;
+    overflow: hidden;
+}
+.task.to-be-added {
+    animation: appearance;
+    animation-duration: 0.25s;
+    animation-iteration-count: 1;
+}
+
+@keyframes appearance {
+    from {
+        opacity: 0;
+        color: var(--lightgray);
+    }
+    to {
+        opacity: 1;
+    }
 }
