@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Task from './Task';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux";
-import { setActiveTaskId } from '../../../redux/TaskReducer';
 import './tasks.css'
 import TaskView from './TaskView';
 import Overlay from '../../lib/Overlay';
-import { getTasks } from '../../../services/taskService';
 import { TaskInterface } from '../../interfaces/Task';
-
-interface TaskProps {
-    id: string
-}
 
 function Tasks() {
     const dispatch = useDispatch();

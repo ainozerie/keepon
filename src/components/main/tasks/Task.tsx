@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../redux";
 import { setActiveTaskId, setTasks } from '../../../redux/TaskReducer';
 import Icon from '../../lib/Icon';
-import { deleteTask, editTask } from '../../../services/taskService';
+import { deleteTask } from '../../../services/taskService';
 import { TaskInterface } from '../../interfaces/Task';
 
 interface TaskProps {
@@ -54,7 +54,6 @@ function Task(props: TaskProps) {
                     {props.deadline ? retriveDate(props.deadline) : ''}
                 </p>}
                 {props.completed && <Icon name='block' onClick={deleteCompleted} active={true}/>}
-                {/* {props.completed && <p className='close' onClick={deleteCompleted}>Remove</p>} */}
             </div>
             {props.description && <p className={isActive ? 'description active' : 'description'}>{props.description}</p>}
             {!props.description && <p className={isActive ? 'description active other' : 'description other'}>No description</p>}

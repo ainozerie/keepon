@@ -1,5 +1,4 @@
 import { NewTaskInterface, TaskInterface } from "../components/interfaces/Task";
-const url: string = 'https://keepon-app-production.up.railway.app/tasks/';
 
 const KEY = 'myTasks';
 

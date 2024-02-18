@@ -1,17 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import './taskView.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../redux'
 import { setActiveTaskId, setEdit, setNewTask, setTasks, setToBeAdded } from '../../../redux/TaskReducer';
 import Icon from '../../lib/Icon';
 import { createTask, editTask } from '../../../services/taskService';
-
-interface TaskViewProps {
-    taskId: string,
-    title: string,
-    description: string | undefined
-}
 
 function TaskView() {
     const newTask = useSelector((state: RootState) => state.task.newTask);

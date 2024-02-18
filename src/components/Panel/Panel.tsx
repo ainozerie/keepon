@@ -23,6 +23,7 @@ function Panel() {
             dispatch(setToBeDeleted(''));
         }, 250);
     }
+
     const completeSelectedTask = () => {
         dispatch(setToBeDeleted(activeTaskId));
         let active = activeTaskId;
@@ -40,6 +41,7 @@ function Panel() {
             setTimeout(() => dispatch(setToBeAdded('')), 0);
         }, 250);
     }
+    
     const editSelectedTask = () => {
         dispatch(setEdit(true));
         let currentTask:TaskInterface | undefined = tasks.find(t => t.id === activeTaskId);

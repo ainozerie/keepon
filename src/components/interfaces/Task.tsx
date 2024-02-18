@@ -10,4 +10,4 @@ export interface NewTaskInterface {
     title: string,
     description: string,
     deadline: string
-} 
+}

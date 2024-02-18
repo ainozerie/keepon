@@ -6,7 +6,6 @@ import { setActiveTaskId } from '../../redux/TaskReducer';
 
 function Nav() {
     const dispatch = useDispatch();
-
     const createNewTask = () => {
         dispatch(setActiveTaskId('new'));
     }

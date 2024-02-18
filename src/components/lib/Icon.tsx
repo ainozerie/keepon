@@ -2,7 +2,7 @@ import React from 'react';
 
 interface IconProps {
     name: string,
-    onClick: (event: any) => void ,
+    onClick: (event: any) => void,
     active: boolean
 }
 

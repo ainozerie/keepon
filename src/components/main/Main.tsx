@@ -4,8 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { getTasks } from '../../services/taskService';
 import { useDispatch } from 'react-redux';
 import { setTasks } from '../../redux/TaskReducer';
-import { TaskInterface } from '../interfaces/Task';
-import Icon from '../lib/Icon';
 
 function Main() {
     const dispatch = useDispatch();
@@ -21,7 +19,6 @@ function Main() {
                     <Route path="/" element={<Tasks />} />
                 </Routes>
             </BrowserRouter>
-            {/* <Icon name='edit_square' onClick={() => {}} active={true}/> */}
         </main>
     );
 }

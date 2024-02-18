@@ -12,7 +12,6 @@
     max-height: 0;
     overflow: hidden;
 }
-
 .panel.active {
     max-height: 7vh;
 }

@@ -9,6 +9,7 @@ export interface TaskInitialState {
     toBeDeleted: string,
     toBeAdded: string
 }
+
 const initialState: TaskInitialState = {
     activeTaskId: '',
     tasks: [],
