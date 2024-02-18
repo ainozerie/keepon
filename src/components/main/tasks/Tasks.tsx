@@ -1,6 +1,6 @@
 import React from 'react';
 import Task from './Task';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../../redux";
 import './tasks.css'
 import TaskView from './TaskView';
