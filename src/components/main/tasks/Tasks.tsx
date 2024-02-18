@@ -8,7 +8,6 @@ import Overlay from '../../lib/Overlay';
 import { TaskInterface } from '../../interfaces/Task';
 
 function Tasks() {
-    const dispatch = useDispatch();
     const tasks = useSelector((state: RootState) => state.task.tasks);
 
     const tasksListing = tasks.map((task: TaskInterface) => {
